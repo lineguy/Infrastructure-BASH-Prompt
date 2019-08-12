@@ -27,7 +27,7 @@ fi
 
 ### Configuration
 
-You can edit the script to get it to do what you would like relativly easily by editing the variables / cut commands at the top of the script. You will also need to edit the case statements if you would like to do colour changes when matching the names.
+You can edit the script to get it to do what you would like relativly easily by editing the variables / cut commands at the top of the script. 
 
 ```
 # BREAK DOWN HOSTNAME INTO SECTIONS
@@ -40,6 +40,20 @@ s="-" # SEPERATOR
 _DATACENTRE=$(echo ${_HOSTNAME} | cut -d$s -f1)
 _ENVIRONMENT=$(echo ${_HOSTNAME} | cut -d$s -f2)
 _HOST=$(echo ${_HOSTNAME} | cut -d$s -f3)
+```
+You will also need to edit the case statements if you would like to do colour changes when matching the names. Please see the DATACENTRE example below:
+
+```
+case ${_DATACENTRE} in
+"aws")
+  _ROOT_DATACENTRE_COLOUR="$YELLOW_2"
+  _USER_DATACENTRE_COLOUR="$YELLOW_2"
+  ;;
+"gcp")
+  _ROOT_DATACENTRE_COLOUR="$GREEN_2"
+  _USER_DATACENTRE_COLOUR="$GREEN_2"
+  ;;
+esac
 ```
 
 #### EXAMPLES
