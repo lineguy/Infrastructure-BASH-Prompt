@@ -27,7 +27,7 @@ fi
 
 ### Configuration
 
-You can edit the script to get it to do what you would like relativly easily by editing the variables / cut commands at the top of the script:
+You can edit the script to get it to do what you would like relativly easily by editing the variables / cut commands at the top of the script. You will also need to edit the case statements if you would like to do colour changes when matching the names.
 
 ```
 # BREAK DOWN HOSTNAME INTO SECTIONS
@@ -43,22 +43,7 @@ _HOST=$(echo ${_HOSTNAME} | cut -d$s -f3)
 ```
 
 #### EXAMPLES
-```
-STRING="datacentre-environment-host1"
-```
-![alt text](https://i.imgur.com/)
-```
-STRING="msa-dev-host2"
-```
-![alt text](https://i.imgur.com/)
-```
-STRING="aws-qa-host3"
-```
-![alt text](https://i.imgur.com/)
-```
-STRING="gcp-prod-host4"
-```
-![alt text](https://i.imgur.com/)
+![alt text](https://i.imgur.com/Ti1zsYU.png)
 
 ### Why would I want to use this script?
 
