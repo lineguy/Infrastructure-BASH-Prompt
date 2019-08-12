@@ -12,24 +12,51 @@ __Disclaimer:__ _this has only been tested on Ubuntu Linux._
 
 You can use the below command to download the `.ps1` file and setup the source in your `.bashrc` file:
 ```
-git clone https://github.com/lineguy/Infrastructure-BASH-Prompt.git && mv Infrastructure-BASH-Prompt/.ps1 ~ && printf "if [ -f ~/.ps1 ]; then\n     source ~/.ps1\nfi\n" >> ~/.bashrc
+git clone https://github.com/lineguy/Infrastructure-BASH-Prompt.git
+mv Infrastructure-BASH-Prompt/.ps1 ~ 
+```
+You will need to add the below to your `.bashrc` file
+```
+vim ~/.bashrc
+```
+```
+if [ -f ~/.ps1 ]; then
+  source ~/.ps1
+fi
 ```
 
 ### Configuration
 
 You can edit the script to get it to do what you would like relativly easily by editing the variables / cut commands at the top of the script:
 
+```
+# BREAK DOWN HOSTNAME INTO SECTIONS
+
+# YOU WILL NEED TO EDIT THE BELOW IN ORDER TO
+# MATCH UP YOUR HOSTNAMES CORRECTLY
+
+s="-" # SEPERATOR
+
+_DATACENTRE=$(echo ${_HOSTNAME} | cut -d$s -f1)
+_ENVIRONMENT=$(echo ${_HOSTNAME} | cut -d$s -f2)
+_HOST=$(echo ${_HOSTNAME} | cut -d$s -f3)
+```
+
 #### EXAMPLES
 ```
-STRING="msa-dev-server1"
+STRING="datacentre-environment-host1"
 ```
 ![alt text](https://i.imgur.com/)
 ```
-STRING="aws-qa-server2"
+STRING="msa-dev-host2"
 ```
 ![alt text](https://i.imgur.com/)
 ```
-STRING="gcp-prod-server3"
+STRING="aws-qa-host3"
+```
+![alt text](https://i.imgur.com/)
+```
+STRING="gcp-prod-host4"
 ```
 ![alt text](https://i.imgur.com/)
 
