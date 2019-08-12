@@ -43,7 +43,7 @@ _HOST=$(echo ${_HOSTNAME} | cut -d$s -f3)
 ```
 
 #### EXAMPLES
-![alt text](https://i.imgur.com/Ti1zsYU.png)
+![alt text](https://i.imgur.com/HDo93fp.jpg)
 
 ### Why would I want to use this script?
 
