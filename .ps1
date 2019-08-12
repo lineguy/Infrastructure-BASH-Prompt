@@ -14,8 +14,8 @@ _HOSTNAME="$(hostname --fqdn)"
 # YOU WILL NEED TO EDIT THE BELOW IN ORDER TO
 # MATCH UP YOUR HOSTNAMES CORRECTLY
 
-# SEPERATOR
-s="-"
+s="-" # SEPERATOR
+
 _DATACENTRE=$(echo ${_HOSTNAME} | cut -d$s -f1)
 _ENVIRONMENT=$(echo ${_HOSTNAME} | cut -d$s -f2)
 _HOST=$(echo ${_HOSTNAME} | cut -d$s -f3)
