@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#_HOSTNAME="$(hostname --fqdn)"
+_HOSTNAME="$(hostname --fqdn)"
 
 # EXAMPLE HOSTNAME
 # aws = DATACENTRE e.g. aws, gcp, azure, etc..
 # dev = ENVIRONMENT e.g. testing, staging production, etc..
 # server1 = HOST e.g. webserver01, firewall01, etc..
 
-_HOSTNAME="aws-dev-server1"
+#_HOSTNAME="aws-dev-server1"
 
 # BREAK DOWN HOSTNAME INTO SECTIONS
 
